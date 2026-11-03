@@ -1,0 +1,75 @@
+{
+ "model": "xt_dynpos",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_DynamicPosBias",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; dynamic position bias (small MLP over distance); non-flash attention"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-10-29 08:55:43",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 269.2,
+    "ms": 29.9,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 139.8,
+    "ms": 11.5,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 745.2,
+    "ms": 32.4,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 424.6,
+    "ms": 12.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 2590.8,
+    "ms": 93.7,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 1523.6,
+    "ms": 36.9,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 4096,
+   "train": {
+    "peak_mb": 9678.0,
+    "ms": 1602.6,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 5839.6,
+    "ms": 123.3,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 8192,
+   "train": "OOM",
+   "infer": "OOM"
+  }
+ ],
+ "seconds": 27.1
+}

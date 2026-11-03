@@ -1,0 +1,24 @@
+{
+ "model": "xt_dynpos",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_DynamicPosBias",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; dynamic position bias (small MLP over distance); non-flash attention"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "overfit",
+ "started": "2026-10-29 09:00:43",
+ "smoke": false,
+ "first_ce": 5.643446445465088,
+ "last_ce": 0.0014213689137250185,
+ "passed": true,
+ "pass_loss": 0.5,
+ "steps": 400,
+ "seconds": 15.0,
+ "lr": 0.001,
+ "note": "overfit uses Adam 1e-3 on 4 x 256 bytes; only an implementation check",
+ "bf16": true
+}

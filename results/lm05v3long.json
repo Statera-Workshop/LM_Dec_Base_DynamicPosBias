@@ -1,0 +1,206 @@
+{
+ "model": "xt_dynpos",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_DynamicPosBias",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; dynamic position bias (small MLP over distance); non-flash attention"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm05v3long",
+ "started": "2026-10-30 03:02:48",
+ "smoke": false,
+ "levels": {
+  "4": {
+   "queries": 1,
+   "distinct": true,
+   "steps": 30000,
+   "capped": false,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 1.615149974822998,
+   "minutes": 106.1,
+   "history": [
+    {
+     "step": 2500,
+     "loss": 1.825401782989502,
+     "acc": 0.25
+    },
+    {
+     "step": 5000,
+     "loss": 1.5449093580245972,
+     "acc": 0.15625
+    },
+    {
+     "step": 7500,
+     "loss": 1.3960492610931396,
+     "acc": 0.265625
+    },
+    {
+     "step": 10000,
+     "loss": 1.3585835695266724,
+     "acc": 0.21875
+    },
+    {
+     "step": 12500,
+     "loss": 1.4814037084579468,
+     "acc": 0.265625
+    },
+    {
+     "step": 15000,
+     "loss": 1.5326322317123413,
+     "acc": 0.203125
+    },
+    {
+     "step": 17500,
+     "loss": 1.4994322061538696,
+     "acc": 0.296875
+    },
+    {
+     "step": 20000,
+     "loss": 1.6874275207519531,
+     "acc": 0.328125
+    },
+    {
+     "step": 22500,
+     "loss": 1.5594162940979004,
+     "acc": 0.15625
+    },
+    {
+     "step": 25000,
+     "loss": 1.404532551765442,
+     "acc": 0.234375
+    },
+    {
+     "step": 27500,
+     "loss": 1.5201225280761719,
+     "acc": 0.34375
+    },
+    {
+     "step": 30000,
+     "loss": 1.615149974822998,
+     "acc": 0.40625
+    }
+   ],
+   "test": {
+    "512": {
+     "normal": 0.291015625,
+     "keys": 0.25390625,
+     "values": 0.01953125,
+     "true_recall": 0.037109375
+    },
+    "2048": {
+     "normal": 0.25390625,
+     "keys": 0.240234375,
+     "values": 0.01171875,
+     "true_recall": 0.013671875
+    },
+    "8192": {
+     "normal": "OOM",
+     "keys": "OOM",
+     "values": "OOM"
+    }
+   },
+   "value_set_baseline": 0.25,
+   "chance": 0.015625,
+   "micro_batch": 1
+  },
+  "16": {
+   "queries": 4,
+   "distinct": true,
+   "steps": 30000,
+   "capped": false,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 2.745828628540039,
+   "minutes": 112.4,
+   "history": [
+    {
+     "step": 2500,
+     "loss": 3.0849385261535645,
+     "acc": 0.0625
+    },
+    {
+     "step": 5000,
+     "loss": 2.9497177600860596,
+     "acc": 0.0390625
+    },
+    {
+     "step": 7500,
+     "loss": 2.8878681659698486,
+     "acc": 0.0390625
+    },
+    {
+     "step": 10000,
+     "loss": 2.86944842338562,
+     "acc": 0.06640625
+    },
+    {
+     "step": 12500,
+     "loss": 2.819033622741699,
+     "acc": 0.046875
+    },
+    {
+     "step": 15000,
+     "loss": 2.8551628589630127,
+     "acc": 0.0703125
+    },
+    {
+     "step": 17500,
+     "loss": 2.8123724460601807,
+     "acc": 0.07421875
+    },
+    {
+     "step": 20000,
+     "loss": 2.782789707183838,
+     "acc": 0.09765625
+    },
+    {
+     "step": 22500,
+     "loss": 2.755373477935791,
+     "acc": 0.078125
+    },
+    {
+     "step": 25000,
+     "loss": 2.757431745529175,
+     "acc": 0.03515625
+    },
+    {
+     "step": 27500,
+     "loss": 2.7705020904541016,
+     "acc": 0.0703125
+    },
+    {
+     "step": 30000,
+     "loss": 2.745828628540039,
+     "acc": 0.08203125
+    }
+   ],
+   "test": {
+    "512": {
+     "normal": 0.068359375,
+     "keys": 0.0703125,
+     "values": 0.01513671875,
+     "true_recall": -0.001953125
+    },
+    "2048": {
+     "normal": 0.07421875,
+     "keys": 0.072265625,
+     "values": 0.013671875,
+     "true_recall": 0.001953125
+    },
+    "8192": {
+     "normal": "OOM",
+     "keys": "OOM",
+     "values": "OOM"
+    }
+   },
+   "value_set_baseline": 0.0625,
+   "chance": 0.015625,
+   "micro_batch": 1
+  }
+ },
+ "seconds": 13113.9
+}
